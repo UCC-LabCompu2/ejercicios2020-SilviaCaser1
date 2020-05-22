@@ -120,3 +120,18 @@ function calcularDivision(){
     num2=document.getElementsByName("div_num2")[0].value;
     document.getElementsByName("div_total")[0].value= num1 / Number(num2);
 }
+
+function dibujarCircuad() {
+    var canvas= document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    var xMax = canvas.width;
+    var yMax = canvas.height;
+    var Margen = 5;
+    ctx.fillStyle = "#333899";
+    ctx.fillRect(0+Margen,yMax-40-Margen,40,40);
+
+    ctx.arc(xMax/2,yMax/2,20,0, 2*Math.PI);
+    ctx.stroke();
+    ctx.fillStyle = "#c433d4";
+    ctx.fill();
+}

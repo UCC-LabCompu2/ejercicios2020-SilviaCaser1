@@ -19,3 +19,8 @@ div.especial h3{
     font-family: 'Rubik', sans-serif;
     text-shadow: 10px 5px #999;
 }
+
+.ejer{
+    border:1px solid #000000;
+    background: rgba(240, 255, 105, 0.47);
+}
