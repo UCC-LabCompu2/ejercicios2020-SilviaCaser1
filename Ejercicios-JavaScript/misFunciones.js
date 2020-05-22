@@ -135,3 +135,28 @@ function dibujarCircuad() {
     ctx.fillStyle = "#c433d4";
     ctx.fill();
 }
+//mala práctica usar variable global. se usa solo a efectos de que el ejercicio se resuelva rápido sin tener que madnar mas params a la función
+var bandera;
+function dibujar(event) {
+    var canvas = document.getElementById("canvasAdibujar");
+    var ctx = canvas.getContext("2d");
+
+    var posX = event.clientX;
+    var posY = event.clientY;
+    console.log(posX, posY);
+
+    canvas.onmousedown = function(){bandera=true};
+    canvas.onmouseup = function(){bandera=false};
+
+    if (bandera) {
+        ctx.fillRect(posX, posY, 5, 5);
+        ctx.fill;
+    }
+}
+
+function limpiarCanvas() {
+    var canvas = document.getElementById("canvasAdibujar");
+    var ctx = canvas.getContext("2d");
+
+    canvas.width = canvas.width;
+}
